@@ -19,7 +19,7 @@
 class RataPi < Formula
   desc "Terminal UI for the Pi coding agent (@mariozechner/pi-coding-agent)"
   homepage "https://github.com/TheSamLePirate/rata-pi"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
@@ -45,24 +45,24 @@ class RataPi < Formula
   # don't get stuck at the offline-mode fallback.
   def caveats
     <<~EOS
-      rata-pi talks to the `pi` coding agent over stdio. Install it via npm:
+      Tau talks to the `pi` coding agent over stdio. Install it via npm:
 
         npm install -g @mariozechner/pi-coding-agent
 
-      Without `pi` on $PATH, rata-pi starts in offline mode — you can still
+      Without `pi` on $PATH, Tau starts in offline mode — you can still
       inspect the chrome, theme cycle, and settings. Any RPC-backed toggle
       flashes "offline — applies next session".
     EOS
   end
 
   def install
-    bin.install "rata-pi"
+    bin.install "tau"
   end
 
   test do
     # --help prints to stderr with a non-zero exit on some clap configs;
     # just assert the binary runs and mentions itself.
-    output = shell_output("#{bin}/rata-pi --help 2>&1", 2)
-    assert_match "rata-pi", output
+    output = shell_output("#{bin}/tau --help 2>&1", 2)
+    assert_match "tau", output
   end
 end
