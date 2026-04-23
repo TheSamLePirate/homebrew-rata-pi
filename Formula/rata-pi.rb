@@ -25,11 +25,11 @@ class RataPi < Formula
   on_macos do
     on_arm do
       url "https://github.com/TheSamLePirate/rata-pi/releases/download/v#{version}/rata-pi-aarch64-apple-darwin.tar.gz"
-      sha256 "b0e57ad432d106ef77772e8ecb81bd9a56143fa2c25b92d166764a7cb9d72ae9"
+      sha256 "b65a5563b8b52c9129e807ba90582658aa819a4532ce6a24840c3e81f6b0c4b9"
     end
     on_intel do
       url "https://github.com/TheSamLePirate/rata-pi/releases/download/v#{version}/rata-pi-x86_64-apple-darwin.tar.gz"
-      sha256 "b39828c737790c5d4c641b0d40d5a3cea13438bbe6433f41cb9c44b1c71de1f1"
+      sha256 "392f30f131a4f930e5e0dfcea2c0cd28acce175ba131f6e37e982f91844f9648"
     end
   end
 
@@ -37,7 +37,7 @@ class RataPi < Formula
     # 64-bit x86 only at 1.0.0. aarch64-linux is a follow-up (needs
     # cross-compilation or a separate Linux ARM runner in CI).
     url "https://github.com/TheSamLePirate/rata-pi/releases/download/v#{version}/rata-pi-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "25cb741e38924762ee8e1311401fd9fc70dab2fa979e04df4a41c6dcc230a1cf"
+    sha256 "691dd098ccf3bab790460c17537295fd0565dea2ef501e482a8d40865276250f"
   end
 
   # rata-pi spawns `pi` from $PATH. The npm package @mariozechner/pi-coding-agent
